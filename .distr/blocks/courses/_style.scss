@@ -1,0 +1,57 @@
+.courses {
+    
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__slider {
+    }
+
+    .container {
+        position: relative;
+    }
+}
+
+.swiper {
+    width: 100%;
+    
+  
+
+    &__description {
+    }
+}
+.swiper-wrapper {
+     margin-bottom: 70px;
+}
+.swiper-slide {
+    
+    //flex-shrink: 1;
+   
+}
+.slide {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF; 
+    &__img {
+    }
+
+    &__title {
+    }
+
+    &__buttons {
+    
+}}
+.swiper-button-prev, .swiper-button-next {
+  background-color: #25313146; 
+  width: 48px;
+  height: 48px;
+  color: #253131;
+  top: 90%;
+
+  
+  
+}
+

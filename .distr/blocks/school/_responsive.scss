@@ -1,0 +1,75 @@
+.school {
+
+	@media ( max-width: 1024px ) {
+				
+		&__text {
+			font-size: 15px;
+			line-height: 30px;
+			margin-bottom: 30px;
+		}
+	
+		.container {
+			padding: 80px 60px 70px;
+		}
+		&__title {
+			width: 50%;
+		}
+	}
+
+	@media ( max-width: 768px ) {
+		&__text {
+			font-size: 13px;
+			line-height: 25px;
+			margin-bottom: 20px;
+		}
+	
+		&__btn {
+			width: 120px;
+			height: 40px;
+			font-size: 13px;
+			line-height: 20px;
+		}
+	
+		.container {
+			padding: 50px 40px 40px;
+		}
+	}
+
+	@media ( max-width: 425px ) {
+		
+		&__title {
+			width: 50%;
+		}
+		&__text {
+			width: 100%;			
+			text-align: center;
+		}
+		&__btn {
+			margin: 0 auto;
+		}
+		.container {
+			padding: 60px 30px 40px;
+		}
+	}
+
+	@media ( max-width: 375px ) {
+		.container {
+			padding: 45px 30px 40px;
+		}
+
+	}
+	@media ( max-width: 320px ) {
+		img {
+			max-width: 92%;
+		}
+		.container {
+			padding: 270px 15px 40px;
+		}
+		&__title {
+			width: 100%;	
+		}
+		&__text {
+			text-align: left;
+		}
+	}
+}

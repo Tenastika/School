@@ -1,0 +1,28 @@
+.header {
+
+	@media ( max-width: 1200px ) {
+	}
+
+	@media ( max-width: 991px ) {
+	}
+
+	@media ( max-width: 768px ) {
+		&__nav {
+			display: none;
+			
+		}
+		&__logo {
+			font-family: 'Play', sans-serif;
+			font-size: 18px;
+			line-height: 20px;
+			color: #FDC332;
+			white-space: nowrap;
+		   }
+	}
+
+	@media ( max-width: 576px ) {
+	}
+
+	@media ( max-width: 425px ) {
+	}
+}

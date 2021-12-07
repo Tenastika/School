@@ -1,0 +1,129 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    synergy.ru/gitlab.url: {{ .Values.global.ci_project_url }}
+    synergy.ru/gitlab.id: "{{ .Values.global.ci_project_id }}"
+    {{- if ne .Values.global.lifetime "" }}
+    synergy.ru/lifetime: "{{ .Values.global.lifetime }}"
+    {{- end }}
+    {{- if ne .Values.global.mon_probe "" }}
+    synergy.ru/blackbox.probe: {{ .Values.global.mon_probe }}
+    {{- end }}
+    {{- if ne .Values.global.mon_code "" }}
+    synergy.ru/blackbox.code: {{ .Values.global.mon_code }}
+    {{- end }}
+    kubernetes.io/ingress.class: "nginx"
+    {{- if ne .Values.global.www_redirect "no" }}
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+    {{- end }}
+    {{- if eq .Values.global.env_name "dev" }}
+    nginx.ingress.kubernetes.io/auth-url: "http://dev-auth.auth.svc.cluster.local"
+    {{- end }}
+    {{- if ne .Values.global.ci_path "" }}
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      # Additional configuration snippet
+      rewrite ^(.*)({{ .Values.global.ci_path | trimSuffix "/" }})$ https://$host$request_uri/ permanent;
+      rewrite (?i){{ .Values.global.ci_path | trimSuffix "/" }}/?(.*) /$1 break;
+    {{- end }}
+  name: ingress
+spec:
+  rules:
+      - host: {{ .Values.global.ci_url }}
+        http:
+          paths:
+          - backend:
+              serviceName: landingpage
+              servicePort: 80
+            {{- if ne .Values.global.ci_path "" }}
+            path: {{ .Values.global.ci_path | trimSuffix "/" }}
+            {{- else }}
+            path: /
+            {{- end }}
+---
+{{- if eq .Values.global.env_name "prod" }}
+{{- range .Values.mirrors }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    synergy.ru/gitlab.url: {{ $.Values.global.ci_project_url }}
+    synergy.ru/gitlab.id: "{{ $.Values.global.ci_project_id }}"
+    {{- if ne $.Values.global.lifetime "" }}
+    synergy.ru/lifetime: "{{ $.Values.global.lifetime }}"
+    {{- end }}
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      # Additional configuration snippet
+      {{- if ne .path "/" }}
+      rewrite ^(.*)({{ .path | trimSuffix "/" }})$ https://$host$request_uri/ permanent;
+      {{- end }}
+      {{- if ne .path "/" }}
+      {{- if .query }}
+      if ($is_args = '?') {
+        rewrite (?i){{ .path | trimSuffix "/" }}/?(.*) /$1?$args&{{ .query }}? break;
+      }
+      if ($is_args = '') {
+        rewrite (?i){{ .path | trimSuffix "/" }}/?(.*) /$1?{{ .query }} break;
+      }
+      {{- else }}
+      rewrite "(?i){{ .path | trimSuffix "/" }}/?(.*)" /$1 break;
+      {{- end }}
+      {{- else }}
+      {{- if .query }}
+      if ($is_args = '?') {
+        rewrite ^/(/|)$ /?$args&{{ .query }}? break;
+      }
+      if ($is_args = '') {
+        rewrite ^/(/|)$ /?{{ .query }} break;
+      }
+      {{- end }}
+      {{- end }}
+  name: mirror-{{ printf "%s%s" .host .path | replace "." "-" | replace "/" "-" | replace "_" "-" | trimSuffix "-" }}
+spec:
+  rules:
+      - host: {{ .host }}
+        http:
+          paths:
+          - backend:
+              serviceName: landingpage
+              servicePort: 80
+            {{- if ne .path "/" }}
+            path: {{ .path | trimSuffix "/" }}
+            {{- else }}
+            path: /
+            {{- end }}
+---
+{{- end }}
+{{- end }}
+{{- if eq .Values.global.env_name "prod" }}
+{{- if .Values.redirects }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    synergy.ru/gitlab.url: {{ .Values.global.ci_project_url }}
+    synergy.ru/gitlab.id: "{{ .Values.global.ci_project_id }}"
+    {{- if ne .Values.global.lifetime "" }}
+    synergy.ru/lifetime: "{{ .Values.global.lifetime }}"
+    {{- end }}
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/permanent-redirect: "https://{{ .Values.global.ci_url }}{{ .Values.global.ci_path | trimSuffix "/" }}/"
+    nginx.ingress.kubernetes.io/permanent-redirect-code: "301"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header Cache-Control "private, max-age=0, no-cache";
+  name: redirects
+spec:
+  rules:
+      {{- range .Values.redirects }}
+      - host: {{ .host }}
+        http:
+          paths:
+          - backend:
+              serviceName: landingpage
+              servicePort: 80
+            path: {{ .path | trimSuffix "/" }}
+      {{- end }}
+---
+{{- end }}
+{{- end }}
