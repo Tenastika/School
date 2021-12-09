@@ -1,0 +1,56 @@
+.mentors {
+    .container {
+padding-top: 30px;
+    }
+    &__title {
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        max-width: 392px;;
+        margin: 0 auto 50px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 2em;
+        justify-items: center;
+    }
+
+    &__card {
+        cursor: pointer;
+        box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.068);  
+    }
+
+    &__card-photo {
+        width: 100%;
+    }
+
+    &__card-info {
+        padding: 20px 0 25px 25px;
+    }
+
+    &__card-title {
+        margin-bottom: 5px;
+        font-size: 22px;
+        line-height: 33px;
+        font-weight: 500; 
+    }
+
+    &__card-text {
+        margin-bottom: 10px;
+    }
+
+    &__card-reit::before {
+        content: url(/img/mentors/stars.png);
+        position: relative;
+        top: 2px;
+        margin-right: 10px;
+    }
+}
+.container {
+}

@@ -7,7 +7,7 @@
 					<a href="#" class="header__link">Home</a>
 				</li>
 				<li class="header__item">
-					<a href="#" class="header__link">Course</a>
+					<a href="#courses" class="header__link">Course</a>
 				</li>
 				<li class="header__item">
 					<a href="#" class="header__link">Features</a>

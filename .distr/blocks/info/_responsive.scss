@@ -1,0 +1,31 @@
+.info {
+	@media ( max-width: 1300px ) {
+		.container {
+			padding-right: 30px;
+			background-color: #FDC332;
+		}
+		&__img { 
+			width: 48%;	 
+		}
+		&__text {
+			width: 50%;
+		}
+	}
+
+	@media ( max-width: 1024px ) {
+		&__img { 
+			width: 100%;
+			padding-top: 0;	 
+		}
+		&__text {
+			width: 100%;
+		}
+		&__background {
+			display: none;
+		}
+		.container {
+			padding-top: 74%;
+			background-color: #FDC332;
+		}	
+	}	
+}

@@ -2,7 +2,8 @@
 <html lang="ru">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<title>Digital School</title>
@@ -31,6 +32,12 @@
 		{% include 'header/block.php' %}
 		{% include 'school/block.php' %}
 		{% include 'courses/block.php' %}
+		{% include 'info/block.php' %}
+		{% include 'mentors/block.php' %}
+		{% include 'advantages/block.php' %}
+		{% include 'feedback/block.php' %}
+		{% include 'subscribe/block.php' %}
+		{% include 'footer/block.php' %}
 		</div>
 
 		{% endblock %}

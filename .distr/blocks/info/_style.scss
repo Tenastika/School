@@ -1,0 +1,61 @@
+.info {
+    position: relative;
+
+    &__background {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__img {
+        position: absolute;
+        width: 54%;
+        padding-top: 9%;
+        left: 0;    
+    }
+
+    &__text {
+        width: 39%;
+        margin-left: auto;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__txt {
+        margin-bottom: 10px; 
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    &__item {
+        
+        margin-bottom: 30px;
+    }
+    .item:nth-child(1)  {
+      h3:before {
+            content: url(/img/info/icon1.png);            
+        }   
+    }
+    .item:nth-child(2)  {
+        h3:before {
+              content: url(/img/info/icon2.png);              
+          }   
+      }
+      .item:nth-child(3)  {
+        h3:before {
+            content: url(/img/info/icon3.png);                
+          }   
+      }
+    h3:before {
+        position: relative;
+        top: 10px;
+        margin-right: 10px; 
+    }  
+}
+
+
+

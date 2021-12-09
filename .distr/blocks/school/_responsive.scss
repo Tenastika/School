@@ -1,6 +1,6 @@
 .school {
 
-	@media ( max-width: 1024px ) {
+	@media ( max-width: 1200px ) {
 				
 		&__text {
 			font-size: 15px;
@@ -16,7 +16,7 @@
 		}
 	}
 
-	@media ( max-width: 768px ) {
+	@media ( max-width: 951px ) {
 		&__text {
 			font-size: 13px;
 			line-height: 25px;
@@ -35,29 +35,72 @@
 		}
 	}
 
-	@media ( max-width: 425px ) {
+	@media ( max-width: 768px ) {
 		
 		&__title {
 			width: 50%;
 		}
 		&__text {
-			width: 100%;			
-			text-align: center;
+			width: 48%;			
+			margin-bottom: 30px;
 		}
-		&__btn {
-			margin: 0 auto;
-		}
+		
 		.container {
 			padding: 60px 30px 40px;
 		}
 	}
 
-	@media ( max-width: 375px ) {
+	@media ( max-width: 576px ) {
 		.container {
-			padding: 45px 30px 40px;
+			padding: 45px 35px 40px;
+		}
+		img {
+			max-width: 45%;
+		}
+		&__title {
+			margin-bottom: 40px;
+		}
+		&__text {
+			width: 100%;
+			text-align: left;
 		}
 
 	}
+	@media ( max-width: 425px ) {
+		
+		.container {
+			padding: 30px 25px 40px;
+		}
+		
+		
+		&__title {
+			margin-bottom: 35px;
+		}
+		&__btn {
+			position: fixed;
+			width: 100%;
+			margin: 0 auto;
+			bottom: 3px;
+			right: 0;
+			z-index: 100;
+			border: 2px solid white;
+		}
+	}
+	@media ( max-width: 375px ) {
+		
+		.container {
+			padding: 30px 25px 40px;
+		}
+		img {
+			max-width: 50%;
+		}
+		
+		&__text {
+			text-align: left;
+		}
+		
+	}
+
 	@media ( max-width: 320px ) {
 		img {
 			max-width: 92%;

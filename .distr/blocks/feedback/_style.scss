@@ -1,49 +1,69 @@
-.courses {
-    
+.feedback {
+
     &__title {
         text-align: center;
     }
 
     &__text {
+        max-width: 565px;
+        margin: 0 auto;
+        text-align: center;
         font-size: 16px;
         line-height: 28px;
-        text-align: center;
-        max-width: 465px;;
-        margin: 0 auto 50px;
-    }   
+        margin-bottom: 40px;
+    }
 
+    &__slider {
+    }
+
+    .container {
+        padding-bottom: 100px;
+    }
     .swiper {
         width: 100%;
     }
-
     .swiper-wrapper {
         padding: 20px 20px 100px;
-       
+    
     }
     .swiper-slide {
         box-shadow: 15px 20px 20px 2px rgba(0, 0, 0, 0.068);  
     }
 
     .slide {
-        display: flex;
-        flex-direction: column;
-        background-color: #FFFFFF; 
-
-        &__title {
-            font-size: 22px;
-            line-height: 33px;
-            font-weight: 500;           
-        }
+        
+        padding: 24px;
 
         &__text {
-            display: flex;
-            padding: 20px 20px 20px;
-            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        &__text:before {
+            content: url(/img/feedback/stars.png);
+            display: block;
+            margin-bottom: 10px;
         }
 
-        span {
-            white-space: nowrap;
-        }    
+    
+        &__student {
+            position: relative;
+            padding-left: 85px;
+        }
+        &__student::before {
+            color: aqua;
+            content: url(/img/feedback/photo1.png);
+            position: absolute;
+            top: 0;
+            margin-left: -85px;
+        }  
+    }
+    .slide:nth-child(1) {
+        
+        .student:before {
+            content: url(/img/feedback/photo1.png);
+            position: absolute;
+            top: 0;
+            margin-left: -85px;
+        }
     }
     div.slide {  
         cursor: pointer;
@@ -66,29 +86,30 @@
         content: url(/img/courses/rightS.png);
         position: relative; 
         bottom: 2px;
-    
+
     }
     .swiper-button-prev::after { 
         content: url(/img/courses/leftS.png);
         position: relative; 
         bottom: 2px; 
-    
+
     }
     .swiper-button-prev:active:after { 
         content: url(/img/courses/leftB.png); 
-    
+
     }
     .swiper-button-next:active:after { 
         content: url(/img/courses/rightB.png);
     }
-    
+
     .swiper-button-next {
-    right: 45%; 
-    left: auto; 
+        right: 45%; 
+        left: auto; 
     }
     .swiper-button-prev {
         left: 45%;
         right: auto;  
     }
-  
+
 }
+

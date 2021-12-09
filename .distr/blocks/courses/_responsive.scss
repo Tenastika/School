@@ -1,17 +1,97 @@
-.empty {
+.courses {
 
-	@media ( max-width: 1200px ) {
-	}
-
-	@media ( max-width: 991px ) {
+	@media ( max-width: 1024px ) {
+		&__text {
+			font-size: 16px;
+			line-height: 28px;
+			margin-bottom: 20px;
+		} 
+		.swiper-button-next {
+			right: 43%; 
+		}
+		.swiper-button-prev {
+			left: 43%;
+		}
+		.slide {
+			display: flex;
+			flex-direction: column;
+			background-color: #FFFFFF; 
+	
+			&__title {
+				font-size: 22px;
+				line-height: 33px;
+				font-weight: 500;           
+			}
+		}
 	}
 
 	@media ( max-width: 768px ) {
-	}
-
-	@media ( max-width: 576px ) {
+		.swiper-button-next {
+			right: 40%; 
+		}
+		.swiper-button-prev {
+			left: 40%;
+		}
+		.slide {
+			&__title {
+				font-size:18px;
+				line-height: 33px;          
+			}
+	
+			&__text {
+				font-size: 15px;
+				line-height: 35px;
+			}}
 	}
 
 	@media ( max-width: 425px ) {
+		.swiper-button-next {
+			right: 33%; 
+		}
+		.swiper-button-prev {
+			left: 33%;
+		}
+		&__text {
+			font-size: 15px;
+			line-height: 25px;
+			margin-bottom: 15px;
+		}
 	}
-}
+
+	@media ( max-width: 375px ) {
+		&__text {
+			font-size: 13px;
+		}
+		.slide {
+			&__title {
+				font-size: 18px;
+				line-height: 33px;          
+			}
+	
+			&__text {
+				font-size: 15px;
+				line-height: 35px;
+				padding: 10px 15px;
+			}}
+	}
+
+	@media ( max-width: 320px ) {
+		.swiper-button-next {
+			right: 30%; 
+		}
+		.swiper-button-prev {
+			left: 30%;
+		}
+
+		&__text {
+			font-size: 13px;
+			line-height: 25px;
+		}
+		.slide {
+			&__title {
+				font-size: 15px;
+				line-height: 33px;          
+			}
+		}
+	}
+	}
