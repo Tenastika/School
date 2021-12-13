@@ -1,0 +1,28 @@
+.subscribe {
+    padding: 10px 100px 50px;
+    .container {
+        background-color: #FDC332;
+        text-align: center;
+        padding: 45px 10px 60px;
+}
+
+    &__title {
+    }
+
+    &__text {
+        max-width: 719px;
+        opacity: 70%;
+        font-size: 16px;
+        line-height: 32px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        width: 192px;
+        height: 48px;
+        background-color: #253131;
+        color: #FFFFFF;
+    }
+}
+

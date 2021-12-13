@@ -1,0 +1,32 @@
+.subscribe {
+
+	@media ( max-width: 1024px ) {
+		padding: 10px 80px;
+	}
+
+	@media ( max-width: 768px ) {
+		padding: 10px 40px;
+		.container {
+			padding-bottom: 30px;
+		}
+		&__text {
+			max-width: 565px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 13px;
+			line-height: 24px;
+			margin-bottom: 30px;
+		}
+	}
+
+	@media ( max-width: 425px ) {
+	}
+
+	@media ( max-width: 375px ) {
+		padding: 10px 25px;
+	}
+
+	@media ( max-width: 320px ) {
+		padding: 10px 15px;
+	}
+}

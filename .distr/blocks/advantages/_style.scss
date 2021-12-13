@@ -1,0 +1,61 @@
+.advantages {
+    .container {
+        padding-top: 10%;
+    }
+    position: relative;
+    &__background {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__img {
+        position: absolute;
+        width: 54%;
+        padding-top: 9%;
+        right: 0;
+    }
+
+    &__text {
+        width: 39%;
+        margin-right: auto;
+        color: #FFFFFF;
+    }
+
+    &__txt {
+        max-width: 377px;
+        font-size: 16px;
+        line-height: 24px;
+        opacity: 60%;
+        margin-bottom: 40px;
+    }
+
+    &__list { 
+       display: grid; 
+       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+       gap: 2em;
+       justify-items: center;   
+    }
+    
+    &__card {
+        width: 100%;
+        padding: 24px 0;
+        background-color: #fff;
+        color: #253131;
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &__card-num {
+        display: block;
+        text-align: center;
+        font-size: 48px;
+        line-height: 72px; 
+        color: 
+        #309565;
+    }
+}

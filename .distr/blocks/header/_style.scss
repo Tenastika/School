@@ -1,0 +1,158 @@
+.header {
+       .container {
+    display: flex;
+    }
+    
+    background-color: #253131;
+    &__container {
+        display: flex;
+        
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    &__logo {
+     font-family: 'Play', sans-serif;
+     font-size: 28px;
+     line-height: 20px;
+     color: #FDC332;
+     white-space: nowrap;
+    }
+
+    &__nav {
+        color: #FFFFFF;  
+        font-size: 16px;
+        
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;     
+    }
+
+    &__item {
+        margin-right: 40px;
+    }
+
+    &__link {
+       color: #FFFFFF;
+       opacity: 60%;
+    }
+    &__link:hover {
+        color: #FFFFFF; 
+        opacity: 100%;
+    }
+
+    .hamburger {
+        display: none;
+        z-index: 2;
+    }
+    .active-menu { 
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 100%;   
+      background-color: #253131;
+      top: 20px;
+      left: 0;
+      z-index: 1; 
+      transform: translateX(0%);
+      transition: transform 1s ease;	
+    }
+    .active-menu ul {
+        
+        display: flex;
+        flex-direction: column; 
+        width: 100%; 
+        padding-bottom: 30px;
+    }
+    .active-menu li {
+        
+       text-align: center;
+       margin-bottom: 15px;
+    }
+
+
+    .login {
+        display: flex;
+        
+        justify-content: flex-end;
+        font-size: 16px;
+        
+        &__item:last-child a {
+            color: #FDC332;
+            margin-left: 24px;
+        }
+
+        &__link {
+            color: #FFFFFF; 
+            opacity: 60%;
+        }
+        &__link:hover {
+            
+            opacity: 100%;
+        }
+    }
+   
+
+	&__modals {
+      // display: none; 
+       background-color: #253131;
+       padding: 0;
+		}
+
+    .modals {
+        width: 60%;
+        margin:  0 auto;
+        
+		&__btn {
+          display: flex; 
+          justify-content: center;
+          color: #fff; 
+          width: 100%;
+		}
+
+		&__btn-login {
+            width: 50%;
+            padding: 10px 0;
+            color: #fff;
+		}
+
+		&__btn-reg {
+            width: 50%;
+		}
+
+		&__form-login {
+		}
+
+		&__form-login-email {
+		}
+
+		&__form-login-pas {
+		}
+
+		&__form-login-rem {
+		}
+
+		&__form-login-btn {
+		}
+
+		&__form-reg {
+		}
+
+		&__form-reg-email {
+		}
+
+		&__form-reg-pas {
+		}
+
+		&__form-reg-rem {
+		}
+
+		&__form-reg-btn {
+		}
+    }
+
+    
+} 
+

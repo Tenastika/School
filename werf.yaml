@@ -1,0 +1,58 @@
+{{ $_ := env "CI_PROJECT_PATH_SLUG"  | trunc 49 | trimSuffix "-" | set . "ProjectName" }}
+---
+configVersion: 1
+project: {{ .ProjectName }}
+---
+artifact: public-folder
+from: node:carbon-alpine
+git:
+  - add: /
+    to: /app
+    stageDependencies:
+      install:
+        - package.json
+      beforeSetup:
+        - .distr
+        - gulpfile.js
+shell:
+  beforeInstall:
+  - apk --update add git freetype-dev libjpeg-turbo libjpeg-turbo-dev libjpeg-turbo-utils libpng libpng-dev libxml2-dev make autoconf automake bash g++ file build-base nasm musl zlib-dev
+  - npm install --global gulp
+  install:
+  - cd /app
+  - npm install
+  beforeSetup:
+  - cd /app
+  - export NODE_ENV=production
+  - npm run gulp build
+  - rm -f public/contents.json
+  - rm -f public/content.json
+---
+#image: node-dev
+#fromImageArtifact: public-folder
+#docker:
+#  WORKDIR: /app
+#  CMD: ['npm', 'run', 'gulp']
+---
+image: nginx
+from: nginx:1.14-alpine
+import:
+  - artifact: public-folder
+    add: /app/public
+    to: /var/www/html
+    after: install
+---
+image: php-fpm
+from: php:7.2-fpm-alpine
+import:
+  - artifact: public-folder
+    add: /app/public
+    to: /var/www/html
+    owner: www-data
+    group: www-data
+    before: install
+shell:
+  beforeInstall:
+  - mkdir /php-conf
+  - ln -s /php-conf/php.ini /usr/local/etc/php/php.ini
+---
