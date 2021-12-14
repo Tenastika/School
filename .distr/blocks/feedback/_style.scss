@@ -39,7 +39,7 @@
             margin-bottom: 20px;
         }
         &__text:before {
-            content: url(/img/feedback/stars.png);
+            content: url(../img/feedback/stars.png);
             display: block;
             margin-bottom: 10px;
         }
@@ -56,13 +56,13 @@
         }
         
         .student1::before {
-            content: url(/img/feedback/photo1.png);
+            content: url(..//img/feedback/photo1.png);
         } 
         .student2::before {
-            content: url(/img/feedback/photo2.png);
+            content: url(../img/feedback/photo2.png);
         }
         .student3::before {
-            content: url(/img/feedback/photo3.png);
+            content: url(../img/feedback/photo3.png);
         }
         &__student::before {
             
@@ -90,23 +90,23 @@
     }
 
     .swiper-button-next::after { 
-        content: url(/img/feedback/rightS.png);
+        content: url(../img/feedback/rightS.png);
         position: relative; 
         bottom: 2px;
 
     }
     .swiper-button-prev::after { 
-        content: url(/img/feedback/leftS.png);
+        content: url(../img/feedback/leftS.png);
         position: relative; 
         bottom: 2px; 
 
     }
     .swiper-button-prev:active:after { 
-        content: url(/img/feedback/leftB.png); 
+        content: url(../img/feedback/leftB.png); 
 
     }
     .swiper-button-next:active:after { 
-        content: url(/img/feedback/rightB.png);
+        content: url(../img/feedback/rightB.png);
     }
 
    

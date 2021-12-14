@@ -1,4 +1,4 @@
-<section class="courses" id="courses">
+<section class="courses" id="course">
 	<div class="container">
 		<h2 class="courses__title">Our Popular Courses</h2>
 		<p class="courses__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.</p>

@@ -1,6 +1,6 @@
 .mentors {
     .container {
-padding-top: 30px;
+        padding-top: 30px;
     }
     &__title {
         text-align: center;
@@ -22,6 +22,7 @@ padding-top: 30px;
     }
 
     &__card {
+        
         cursor: pointer;
         box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.068); 
         display: block; 
@@ -34,7 +35,7 @@ padding-top: 30px;
     }
 
     &__card-info {
-        padding: 20px 0 25px 25px;
+        margin: 20px;
         
     }
 
@@ -50,37 +51,36 @@ padding-top: 30px;
     }
 
     &__card-reit::before {
-        content: url(/img/mentors/stars.png);
+        content: url(../img/mentors/stars.png);
         position: relative;
         top: 2px;
         margin-right: 10px;
     }
-    &__card-modal {
-        display: none;
-        
-        width: 60%;
-        .mentors__card-photo {
+   
+}
+.mentors {
 
-            float: left;
-            width: 40%;
-            margin-right: 30px;
-        }
-        .mentors__card-title, 
-        .mentors__card-text,
-        .mentors__card-reit {
-            
-            margin-left: auto;
-            margin-bottom: 10px;
-        }
-        .mentors__card-info {
-            padding: 0;
-        }
-        .mentors__card-description {
-            font-size: 18px;
-            line-height: 33px; 
-        }
+    &__card-modal {
+      display: none;
     }
-    &__card-div {
-        padding: 40px;
+
+    &__card-modal-content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    &__card-modal-info {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    &__card-modal-photo {
+        width: 40%;
+        object-fit: cover;
+    }
+
+    &__card-modal-user {
+        padding:30px;   
     }
 }

@@ -37,17 +37,17 @@
     }
     .item:nth-child(1)  {
       h3:before {
-            content: url(/img/info/icon1.png);            
+            content: url(../img/info/icon1.png);            
         }   
     }
     .item:nth-child(2)  {
         h3:before {
-              content: url(/img/info/icon2.png);              
+              content: url(../img/info/icon2.png);              
           }   
       }
       .item:nth-child(3)  {
         h3:before {
-            content: url(/img/info/icon3.png);                
+            content: url(../img/info/icon3.png);                
           }   
       }
     h3:before {
