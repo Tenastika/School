@@ -53,19 +53,19 @@
 					<ul class="footer__block-list">
 						<li class="footer__block-item">
 							<img src="img/footer/f.png" alt="logo" class="footer__item-logo">
-							<a href="" class="footer__block-link">Facebook</a>
+							<a href="https://ru-ru.facebook.com/" class="footer__block-link" target="_blank">Facebook</a>
 						</li>
 						<li class="footer__block-item">
 						<img src="img/footer/t.png" alt="logo" class="footer__item-logo">
-							<a href="" class="footer__block-link">Twitter</a>
+							<a href="https://twitter.com/?lang=ru" class="footer__block-link" target="_blank">Twitter</a>
 						</li>
 						<li class="footer__block-item">
 						<img src="img/footer/i.png" alt="logo" class="footer__item-logo">
-							<a href="" class="footer__block-link">Instagram</a>
+							<a href="https://www.instagram.com/" class="footer__block-link" target="_blank">Instagram</a>
 						</li>
 						<li class="footer__block-item">
 						<img src="img/footer/l.png" alt="logo" class="footer__item-logo">
-							<a href="" class="footer__block-link">Linkedin</a>
+							<a href="https://ru.wikipedia.org/wiki/LinkedIn" class="footer__block-link" target="_blank">Linkedin</a>
 						</li>
 					</ul>
 				</div>

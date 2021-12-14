@@ -99,12 +99,13 @@
 	
 
     .modals {
-        max-width: 500px;
+        
+        
         display: none; 
         position: relative;
        background-color: #253131;
        padding: 0;
-        width: 60%;
+        
         margin:  0 auto;
         
 		&__btn {
@@ -144,8 +145,13 @@
         &__form-reg {
           display: flex;
           flex-direction: column;
-          padding: 40px;
+          width: 300px;
+          height: 310px;
+          padding: 20px;
           background-color: #253131;
+		}
+        &__form-reg {
+            display: none;    
 		}
 
 		&__form-login-rem {
@@ -182,12 +188,7 @@
 		}
         
 
-		&__form-reg {
-            position: absolute;
-            top: 62px;
-            width: 100%;
-            z-index: -1;
-		}
+	
 
 
         &__form-login-rem,

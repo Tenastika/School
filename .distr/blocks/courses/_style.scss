@@ -70,27 +70,33 @@
     }
 
     .swiper-button-next::after { 
-        content: url(/img/courses/rightS.png);
+        content: url(img/courses/rightS.png);
         position: relative; 
         bottom: 2px;
     
     }
     .swiper-button-prev::after { 
-        content: url(/img/courses/leftS.png);
+        content: url(img/courses/leftS.png);
         position: relative; 
         bottom: 2px; 
     
     }
     .swiper-button-prev:active:after { 
-        content: url(/img/courses/leftB.png); 
+        content: url(img/courses/leftB.png); 
     
     }
     .swiper-button-next:active:after { 
-        content: url(/img/courses/rightB.png);
+        content: url(img/courses/rightB.png);
     }
     
-   .modal-course {
-       display: none;
-   }
+   
   
 }
+.modal-course {
+       display: none;
+       width: 60%;
+       padding:  40px;
+       h2 {
+           text-align: center;
+       }
+   }

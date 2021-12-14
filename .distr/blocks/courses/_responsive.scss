@@ -79,3 +79,16 @@
 		}
 	}
 	}
+	.modal-course {
+		@media ( max-width: 768px ) {
+			width: 80%;
+			padding:  30px;
+		}
+		@media ( max-width: 425px ) {
+			width: 80%;
+			padding:  20px;
+			h2 {
+				font-size: 25px;
+			}
+		}
+	}

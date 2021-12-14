@@ -3,7 +3,7 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
 
     slidesPerView: 3,
     slidesPerGroup: 1,
@@ -92,11 +92,21 @@ $('[data-fancybox="contacts"]').fancybox({
     smallBtn : true,
       
 })
+$('[data-fancybox="login"]').fancybox({     
+    toolbar  : false,
+    smallBtn : false,
+      
+})
+$('[data-fancybox="signup"]').fancybox({     
+    toolbar  : false,
+    smallBtn : false,
+      
+})
 $('[data-fancybox="courses"]').fancybox({     
    
-    loop: true,
+    loop: false,
      toolbar  : false,
-	 smallBtn : false, 
+	 smallBtn : true, 
 })
 const inputPassLog = document.querySelector('.modals__form-login-pas');
 const inputPassReg = document.querySelector('.modals__form-reg-pas');
@@ -116,25 +126,67 @@ function getViewPass(btn, input) {
 getViewPass(passViewLog, inputPassLog);
 getViewPass(passViewReg, inputPassReg);
 
-const btnLogin = document.querySelector('.modals__btn-login');
-const btnReg = document.querySelector('.modals__btn-reg');
-const formLog = document.querySelector('.modals__form-login');
-const formReg = document.querySelector('.modals__form-reg');
-console.log(formLog)
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+    const header = document.querySelector(headerSelector), 
+          tab = document.querySelectorAll(tabSelector), 
+          content = document.querySelectorAll(contentSelector);
 
-function addClass(btn1, form1, btn2, form2) {
-    btn1.addEventListener('click', function changeClass() {
-        btn1.classList.add('active');
-        btn2.classList.remove('active');
-        form1.classList.add('index1');
-        form2.classList.remove('index1');
-    });
-    btn2.addEventListener('click', function changeClass() {
-        btn1.classList.remove('active');
-        btn2.classList.add('active');
-        form1.classList.remove('index1');
-        form2.classList.add('index1');
+    function hideTabContent() {
+        content.forEach(item => {
+            item.style.display = 'none';
+        });
+
+        tab.forEach(item => {
+            item.classList.remove(activeClass);
+        })
+    };
+
+    function showTabContent(i = 0) {
+        content[i].style.display = 'flex';
+        tab[i].classList.add(activeClass);
+    }
+    //для всегда активной первой вкладки
+    hideTabContent();
+     showTabContent();
+
+    header.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.classList.contains(tabSelector.replace(/\./,"")) ||
+        target.parentNode.classList.contains(tabSelector.replace(/\./,""))) {
+            tab.forEach((item, i) => {
+                if (target == item || target.parentNode == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            })
+        }
     })
+ 
+    //для соответствия активной вкладки нажимаемой кнопке
+    const btnSignup = document.querySelector('.signup');
 
-}
-addClass(btnLogin,formLog, btnReg, formReg);
+    btnSignup.addEventListener('click', function (e) {
+    if (e.target.classList.contains('signup') ||
+    e.target.parentNode.classList.contains('signup')) {
+        hideTabContent();
+        showTabContent(1);
+    }
+    })
+    const btnLogin = document.querySelector('.btn-login');
+    console.log(btnLogin);
+    btnLogin.addEventListener('click', function (e) {
+    if (e.target.classList.contains('btn-login') ||
+    e.target.parentNode.classList.contains('btn-login')) {
+        hideTabContent();
+        showTabContent(0);
+    }
+    
+})
+
+
+};
+tabs('.modals__btn', '.btn-tab', '.form-tab', 'active' )
+ 
+ 
+ 
+ 

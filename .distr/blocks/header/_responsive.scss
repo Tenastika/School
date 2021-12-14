@@ -56,6 +56,15 @@
 			font-size: 15px;
 			line-height: 22px;
 		}
+		.active  {
+			width: 100%;
+			padding: 10px 0;
+			font-size: 28px;
+			color: #fff;
+			background-color: #253131;
+			color: #FDC332;
+			
+		}
 
 		.login {
 			&__item {
