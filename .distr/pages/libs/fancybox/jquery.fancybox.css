@@ -178,9 +178,7 @@ body.compensate-for-scrollbar {
     text-align: left;
     vertical-align: middle;
 }
-.contacts .fancybox-content{
-    background: rgb(122, 43, 43);
-}
+
 
 .fancybox-slide--image .fancybox-content {
     animation-timing-function: cubic-bezier(.5, 0, .14, 1);

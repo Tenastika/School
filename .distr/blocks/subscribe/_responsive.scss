@@ -30,3 +30,10 @@
 		padding: 10px 15px;
 	}
 }
+.modal-sub {
+	@media ( max-width: 320px ) {
+		span {
+			font-size: 13px;
+		}
+	}
+}

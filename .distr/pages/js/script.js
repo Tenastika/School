@@ -90,11 +90,51 @@ $('[data-fancybox="mentors"]').fancybox({
 $('[data-fancybox="contacts"]').fancybox({     
     toolbar  : false,
     smallBtn : true,
-    padding: 0,   
+      
 })
 $('[data-fancybox="courses"]').fancybox({     
    
     loop: true,
      toolbar  : false,
-	 smallBtn : true, 
+	 smallBtn : false, 
 })
+const inputPassLog = document.querySelector('.modals__form-login-pas');
+const inputPassReg = document.querySelector('.modals__form-reg-pas');
+const passViewLog = document.querySelector('.pass-view-log');
+const passViewReg = document.querySelector('.pass-view-reg');
+
+
+function getViewPass(btn, input) {
+    btn.addEventListener('click', function addType() {
+        if (input.type == 'password') {
+            input.type = 'text';
+        } else {
+            input.type = 'password'
+        }   
+    })    
+}
+getViewPass(passViewLog, inputPassLog);
+getViewPass(passViewReg, inputPassReg);
+
+const btnLogin = document.querySelector('.modals__btn-login');
+const btnReg = document.querySelector('.modals__btn-reg');
+const formLog = document.querySelector('.modals__form-login');
+const formReg = document.querySelector('.modals__form-reg');
+console.log(formLog)
+
+function addClass(btn1, form1, btn2, form2) {
+    btn1.addEventListener('click', function changeClass() {
+        btn1.classList.add('active');
+        btn2.classList.remove('active');
+        form1.classList.add('index1');
+        form2.classList.remove('index1');
+    });
+    btn2.addEventListener('click', function changeClass() {
+        btn1.classList.remove('active');
+        btn2.classList.add('active');
+        form1.classList.remove('index1');
+        form2.classList.add('index1');
+    })
+
+}
+addClass(btnLogin,formLog, btnReg, formReg);

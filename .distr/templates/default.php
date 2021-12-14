@@ -42,6 +42,7 @@
 		{% include 'footer/block.php' %}
 
 		{% include 'contacts/block.php' %}
+		{% include 'thanks/block.php' %}
 		</div>
 
 		{% endblock %}

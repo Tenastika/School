@@ -38,24 +38,25 @@
 	</div>
 
  <!-- Модальные окна вход/регистрация -->
-	<article class="header__modals modals" id="login-modals">
+	
+</section>
+<article class="modals" id="login-modals">
 		<div class="modals__btn">
-			<button class="modals__btn-login">Login</button>
+			<button class="modals__btn-login active">Login</button>
 			<button class="modals__btn-reg">Signup</button>
 		</div>
-		<form action="" class="modals__form-login">
-			<input type="email" class="modals__form-login-email">
-			<label for="#password">View</label>
-			<input type="password" class="modals__form-login-pas" id="password">
-			<input type="checkbox" class="modals__form-login-rem">Remember me
+		<form action="" class="modals__form-login index1" >
+			<input type="email" class="modals__form-login-email " placeholder="Email">
+			<label for="#password" class="pass-view-log">View</label>
+			<input type="password" class="modals__form-login-pas" id="password" placeholder="Password">
+			<label class="check-login"><input type="checkbox" class="modals__form-login-rem"><span class="checkstyle"></span><span>Remember me</span></label>
 			<button class="modals__form-login-btn">login</button>
 		</form>
 		<form action="" class="modals__form-reg">
-			<input type="email" class="modals__form-reg-email">
-			<label for="#password">View</label>
-			<input type="password" class="modals__form-reg-pas" id="password">
-			<input type="checkbox" class="modals__form-reg-rem">I accept the user agreement
+			<input type="email" class="modals__form-reg-email" placeholder="Email">
+			<label for="#password2" class="pass-view-reg">View</label>
+			<input type="password" class="modals__form-reg-pas" id="password2" placeholder="Password">
+			<label class="check-reg"><input type="checkbox" class="modals__form-reg-rem"><span class="checkstyle"></span><span>I accept the user agreement</span></label>
 			<button class="modals__form-reg-btn">Signup</button>
 		</form>
 	</article>
-</section>
