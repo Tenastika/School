@@ -60,6 +60,7 @@ document.addEventListener ('click', function(e) {
     }
 })
 
+
 // const mentorsCard = document.querySelectorAll('.mentors__card');
 // for (let card of mentorsCard) {
 //     card.addEventListener('click', function addClass() {
@@ -90,17 +91,16 @@ $('[data-fancybox="mentors"]').fancybox({
 $('[data-fancybox="contacts"]').fancybox({     
     toolbar  : false,
     smallBtn : true,
-      
+    autoFocus: false, // отменяет автофокус в инпуте 
+    
 })
-$('[data-fancybox="login"]').fancybox({     
-    toolbar  : false,
-    smallBtn : false,
-      
+$('.login__link1').fancybox({     
+   
 })
 $('[data-fancybox="signup"]').fancybox({     
     toolbar  : false,
     smallBtn : false,
-      
+    autoFocus: false,  
 })
 $('[data-fancybox="courses"]').fancybox({     
    
@@ -108,6 +108,21 @@ $('[data-fancybox="courses"]').fancybox({
      toolbar  : false,
 	 smallBtn : true, 
 })
+
+// $('[data-fancybox="contact-thanks"]').fancybox({     
+   
+//     loop: false,
+//      toolbar  : false,
+// 	 smallBtn : true, 
+   
+// })
+
+
+
+
+
+
+
 const inputPassLog = document.querySelector('.modals__form-login-pas');
 const inputPassReg = document.querySelector('.modals__form-reg-pas');
 const passViewLog = document.querySelector('.pass-view-log');
@@ -142,12 +157,15 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     };
 
     function showTabContent(i = 0) {
+
         content[i].style.display = 'flex';
         tab[i].classList.add(activeClass);
+
     }
-    //для всегда активной первой вкладки
+    
     hideTabContent();
-     showTabContent();
+    //для всегда активной первой вкладки
+    showTabContent(1);
 
     header.addEventListener('click', (e) => {
         const target = e.target;
@@ -173,7 +191,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     }
     })
     const btnLogin = document.querySelector('.btn-login');
-    console.log(btnLogin);
+    
     btnLogin.addEventListener('click', function (e) {
     if (e.target.classList.contains('btn-login') ||
     e.target.parentNode.classList.contains('btn-login')) {
@@ -188,5 +206,19 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 tabs('.modals__btn', '.btn-tab', '.form-tab', 'active' )
  
  
+ let btn = document.querySelector(".modals__form-login-btn");
+ let form = document.querySelector(".modals");
  
- 
+function openThanks(closeModal, thanks, buttonOpenThanks) {
+    let btn = document.querySelector(buttonOpenThanks);
+ btn.addEventListener('click', (e) => { // Нажать кнопку login
+    //e.target.preventDefault;
+    $.fancybox.close($(closeModal)) //закрыть модалку с табами
+    $.fancybox.open($(thanks))  //открыть модалку thanks
+ })
+}
+
+openThanks('.login__link1', '#contact-sub-thanks', '.modals__form-login-btn');
+//openThanks('#modal-sub', '#contact-sub-thanks', );
+
+

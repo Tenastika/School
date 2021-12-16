@@ -1,5 +1,5 @@
 .feedback {
-
+    background:#f0f0f0;;
     &__title {
         text-align: center;
     }
@@ -12,10 +12,6 @@
         line-height: 28px;
         margin-bottom: 40px;
     }
-
-    &__slider {
-    }
-
     .container {
         padding-bottom: 100px;
     }
@@ -23,20 +19,16 @@
         width: 100%;
     }
     .swiper-wrapper {
-        padding: 20px 20px 100px;
+        padding: 20px 0 100px;
     
-    }
-    .swiper-slide {
-        box-shadow: 15px 20px 20px 2px rgba(0, 0, 0, 0.068); 
-
     }
 
     .slide {
         max-height: 345px;
-        padding: 24px;
-
+        background:#ffffff;;
         &__text {
-            margin-bottom: 20px;
+        margin-bottom: 20px;
+        padding: 24px;
         }
         &__text:before {
             content: url(../img/feedback/stars.png);
@@ -52,30 +44,28 @@
     
         &__student {
             position: relative;
-            padding-left: 85px;
+            padding: 0 0 20px 110px;
         }
         
         .student1::before {
             content: url(..//img/feedback/photo1.png);
         } 
+
         .student2::before {
             content: url(../img/feedback/photo2.png);
         }
+
         .student3::before {
             content: url(../img/feedback/photo3.png);
         }
-        &__student::before {
-            
+
+        &__student::before {     
             position: absolute;
             top: 0;
             margin-left: -85px;
         } 
     }
     
-    div.slide {  
-        cursor: pointer;
-    }
-
     .swiper-button-prev, .swiper-button-next {
         background-color: #2531311e; 
         width: 48px;
@@ -93,23 +83,20 @@
         content: url(../img/feedback/rightS.png);
         position: relative; 
         bottom: 2px;
-
     }
+
     .swiper-button-prev::after { 
         content: url(../img/feedback/leftS.png);
         position: relative; 
         bottom: 2px; 
-
     }
+
     .swiper-button-prev:active:after { 
         content: url(../img/feedback/leftB.png); 
-
     }
+
     .swiper-button-next:active:after { 
         content: url(../img/feedback/rightB.png);
     }
-
-   
-
 }
 

@@ -1,5 +1,5 @@
 .courses {
-    
+    background: #f0f0f0;
     &__title {
         text-align: center;
     }
@@ -21,9 +21,7 @@
         padding: 20px 20px 100px 0;
        
     }
-    .swiper-slide {
-        box-shadow: 15px 20px 20px 2px rgba(0, 0, 0, 0.068);  
-    }
+    
 
     .slide {
        
@@ -42,6 +40,7 @@
             padding: 20px 20px 20px;
             justify-content: space-between;
         }
+        
 
         span {
             white-space: nowrap;
