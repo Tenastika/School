@@ -12,14 +12,8 @@
         margin: 0 auto 50px;
     }   
 
-    .swiper {
-        
-    }
-
     .swiper-wrapper {
-        
         padding: 20px 20px 100px 0;
-       
     }
     
 
@@ -87,9 +81,7 @@
     .swiper-button-next:active:after { 
         content: url(../img/courses/rightB.png);
     }
-    
-   
-  
+
 }
 .modal-course {
        display: none;

@@ -88,7 +88,6 @@ $('.header__link3').fancybox({
    
 })
 
-
 $('[data-fancybox="courses"]').fancybox({     
    
     loop: false,
@@ -138,7 +137,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     
     hideTabContent();
     //для всегда активной первой вкладки
-    showTabContent(1);
+    showTabContent();
 
     header.addEventListener('click', (e) => {
         const target = e.target;

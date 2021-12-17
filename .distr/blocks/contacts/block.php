@@ -5,7 +5,7 @@
 			
 			<h3 class="contacts__title">Contact us</h3>
 			<span>Let’s get to the nex level together</span>
-			<form action="" id= "contact-form" onSubmit="CloseModal()">
+			<form action="" id= "contact-form">
 				<label for="contact-name">Full name</label>
 				<input class="contacts__form-name" id="contact-name" type="text" placeholder="Enter your first name" >
 
