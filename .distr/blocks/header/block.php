@@ -10,7 +10,7 @@
 		<nav class="header__nav">
 			<ul class="header__list">
 				<li class="header__item">
-					<a href="header" class="header__link">Home</a>
+					<a href="#header" class="header__link">Home</a>
 				</li>
 				<li class="header__item">
 					<a href="#course" class="header__link">Course</a>
