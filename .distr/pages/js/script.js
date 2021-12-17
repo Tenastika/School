@@ -180,10 +180,13 @@ tabs('.modals__btn', '.btn-tab', '.form-tab', 'active' )
 function openThanks(closeModal, thanks, buttonOpenThanks) {
 
     let btn = document.querySelector(buttonOpenThanks);
-
+    
     btn.addEventListener('click', () => { // Нажать кнопку login
+    
     $.fancybox.close($(closeModal)); //закрыть модалку с табами
     $.fancybox.open($(thanks));  //открыть модалку thanks
+    
+    
  })
 }
 

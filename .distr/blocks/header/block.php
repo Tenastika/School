@@ -5,7 +5,7 @@
     			<span class="hamburger-inner"></span>
   			</span>
 		</button>
-		<a class="header__logo" href="#" target="_blank">Learn. Love</a>
+		<a class="header__logo" href="#">Learn. Love</a>
 		
 		<nav class="header__nav">
 			<ul class="header__list">
@@ -46,18 +46,18 @@
 			<button class="modals__btn-reg btn-tab">Signup</button>
 		</div>
 		
-			<form action="" class="modals__form-login form-tab" >
+			<form class="modals__form-login form-tab" >
 				<input type="email" class="modals__form-login-email " placeholder="Email">
 				<label for="#password" class="pass-view-log">View</label>
 				<input type="password" class="modals__form-login-pas" id="password" placeholder="Password">
 				<label class="check-login"><input type="checkbox" class="modals__form-login-rem"><span class="checkstyle"></span><span>Remember me</span></label>
-				<button class="modals__form-login-btn" type="submit">login</button>
+				<button class="modals__form-login-btn" type="button">login</button>
 			</form>
-			<form action="" class="modals__form-reg form-tab" >
+			<form class="modals__form-reg form-tab" >
 				<input type="email" class="modals__form-reg-email" placeholder="Email">
 				<label for="#password2" class="pass-view-reg">View</label>
 				<input type="password" class="modals__form-reg-pas" id="password2" placeholder="Password">
 				<label class="check-reg"><input type="checkbox" class="modals__form-reg-rem"><span class="checkstyle"></span><span>I accept the user agreement</span></label>
-				<button class="modals__form-reg-btn" type="submit" >Signup</button>
+				<button class="modals__form-reg-btn" type="button" >Signup</button>
 			</form>	
 </article>

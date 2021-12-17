@@ -5,7 +5,7 @@
 			
 			<h3 class="contacts__title">Contact us</h3>
 			<span>Let’s get to the nex level together</span>
-			<form action="" id= "contact-form">
+			<form  id= "contact-form">
 				<label for="contact-name">Full name</label>
 				<input class="contacts__form-name" id="contact-name" type="text" placeholder="Enter your first name" >
 
@@ -14,7 +14,7 @@
 
 				<label for="contact-txt">How can we help?</label>
 				<textarea cols="200" rows="10" class="contacts__form-txt" id="contact-txt" placeholder="Your message"></textarea>
-				<button class="contacts__form-btn" type="submit">Send</button>
+				<button class="contacts__form-btn" type="button">Send</button>
 			</form>
 		</article>
 		<ul class="contacts__list">
