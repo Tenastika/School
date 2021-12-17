@@ -18,6 +18,7 @@
 		.container {
 			background-color: #253131;
 		}
+
 		&__background {
 			display: none;
 		}
@@ -61,18 +62,13 @@
 		 }
 		 
 		 &__card {
-			
-			padding: 20px 0;
-			
-			
+			padding: 20px 0;	
 			font-size: 18px;
 			line-height: 25px;
-			font-weight: 400;
-			
+			font-weight: 400;	
 		}
 	
 		&__card-num {
-			
 			font-size: 30px;
 			line-height: 60px; 
 			color: 
@@ -82,7 +78,6 @@
 
 	@media ( max-width: 425px ) {
 		&__txt {
-			
 			width: 100%;
 		}
 		&__text {	
@@ -90,11 +85,5 @@
 		}
 		
 		
-	}
-
-	@media ( max-width: 375px ) {
-	}
-
-	@media ( max-width: 320px ) {
 	}
 }

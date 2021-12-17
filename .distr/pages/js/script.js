@@ -61,67 +61,40 @@ document.addEventListener ('click', function(e) {
 })
 
 
-// const mentorsCard = document.querySelectorAll('.mentors__card');
-// for (let card of mentorsCard) {
-//     card.addEventListener('click', function addClass() {
-//         card.classList.toggle('card-active')
-//     })
-// }
-// document.addEventListener ('click', function(e) {
-//     if (!(e.target.classList.contains("card-active") )) {
-
-//        console.log(e.target)    
-//     }}
-// )
-
-// const ourCourses = document.querySelectorAll('div.slide');
-// for (let course of ourCourses) {
-//     course.addEventListener('click', function() {
-//         alert('!!!');
-//     })
-// }
-
-
 $('[data-fancybox="mentors"]').fancybox({     
      loop: true,
      toolbar  : false,
 	 smallBtn : true,   
 })
    
-$('[data-fancybox="contacts"]').fancybox({     
+$('.header__link1').fancybox({     
     toolbar  : false,
     smallBtn : true,
     autoFocus: false, // отменяет автофокус в инпуте 
     
 })
-$('.login__link1').fancybox({     
-   
-})
-$('[data-fancybox="signup"]').fancybox({     
+$('.login__link').fancybox({     
     toolbar  : false,
     smallBtn : false,
-    autoFocus: false,  
+    autoFocus: false,
 })
+$('.school__btn').fancybox({     
+   
+})
+$('.header__link2').fancybox({     
+   
+})
+$('.header__link3').fancybox({     
+   
+})
+
+
 $('[data-fancybox="courses"]').fancybox({     
    
     loop: false,
      toolbar  : false,
 	 smallBtn : true, 
 })
-
-// $('[data-fancybox="contact-thanks"]').fancybox({     
-   
-//     loop: false,
-//      toolbar  : false,
-// 	 smallBtn : true, 
-   
-// })
-
-
-
-
-
-
 
 const inputPassLog = document.querySelector('.modals__form-login-pas');
 const inputPassReg = document.querySelector('.modals__form-reg-pas');
@@ -201,24 +174,23 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     
 })
 
-
 };
 tabs('.modals__btn', '.btn-tab', '.form-tab', 'active' )
  
  
- let btn = document.querySelector(".modals__form-login-btn");
- let form = document.querySelector(".modals");
- 
 function openThanks(closeModal, thanks, buttonOpenThanks) {
+
     let btn = document.querySelector(buttonOpenThanks);
- btn.addEventListener('click', (e) => { // Нажать кнопку login
-    //e.target.preventDefault;
-    $.fancybox.close($(closeModal)) //закрыть модалку с табами
-    $.fancybox.open($(thanks))  //открыть модалку thanks
+
+    btn.addEventListener('click', () => { // Нажать кнопку login
+    $.fancybox.close($(closeModal)); //закрыть модалку с табами
+    $.fancybox.open($(thanks));  //открыть модалку thanks
  })
 }
 
-openThanks('.login__link1', '#contact-sub-thanks', '.modals__form-login-btn');
-//openThanks('#modal-sub', '#contact-sub-thanks', );
+openThanks('#login-modals', '#contact-sub-thanks', '.modals__form-login-btn');
+openThanks('#modal-sub', '#contact-sub-thanks', '.modal-sub__btn' );
+openThanks('#login-modals', '#contact-sub-thanks', '.modals__form-reg-btn');
+openThanks('#contact', '#contact-thanks', '.contacts__form-btn');
 
 

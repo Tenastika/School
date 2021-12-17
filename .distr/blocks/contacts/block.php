@@ -1,5 +1,5 @@
 
-	<article class="contacts" id="contacts" onSubmit="CloseModal()">
+	<article class="contacts" id="contact">
 		<h2 class="contacts__vert-title">contacts</h2>	
 		<article class="contacts__form">
 			
@@ -14,7 +14,7 @@
 
 				<label for="contact-txt">How can we help?</label>
 				<textarea cols="200" rows="10" class="contacts__form-txt" id="contact-txt" placeholder="Your message"></textarea>
-				<button class="contacts__form-btn" data-fancybox="contact-thanks" href="#contact-thanks" type="submit">Send</button>
+				<button class="contacts__form-btn" type="submit">Send</button>
 			</form>
 		</article>
 		<ul class="contacts__list">

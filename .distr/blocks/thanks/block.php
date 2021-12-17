@@ -6,4 +6,8 @@
 	<h3>Thank you!</h3>
 	<p>You have subscribed to our news</p>
 </article>
+<article class="contact-thanks" id="sorry-thanks">
+	<h3>Sorry!</h3>
+	<p>He page you want to go to is still in development</p>
+</article>
 

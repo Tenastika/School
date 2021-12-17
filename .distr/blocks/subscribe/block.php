@@ -9,5 +9,5 @@
 <article class="modal-sub" id="modal-sub">
 	<input type="email" class="modal-sub__input" placeholder="Email">
 	<label class="check-reg"><input type="checkbox" class="modal-sub__check"><span class="checkstyle"></span><span>I accept the user agreement</span></label>
-	<button class="modal-sub__btn">Subscribe</button>
+	<button class="modal-sub__btn" type='submit'>Subscribe</button>
 </article>                   
