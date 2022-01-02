@@ -6,9 +6,6 @@
         padding: 45px 10px 60px;
 }
 
-    &__title {
-    }
-
     &__text {
         max-width: 719px;
         opacity: 70%;
@@ -25,4 +22,73 @@
         color: #FFFFFF;
     }
 }
+.modal-sub {
+    display: none;
+    padding: 40px;
+    background-color: #253131;
+    color: #FDC332;
+    max-width: 500px;
+    &__input {
+        width: 100%;
+        margin-bottom: 30px;
+        height: 44px;
+        padding: 10px;
+        font-size: 15px;
+        background-color: #253131;
+        border: 2px solid #FDC332;
+        color: #fff;     
+    }
+
+    &__input::placeholder {
+        color: #fdc33254;            
+    }
+
+    &__btn {
+        display: block; 
+        width: 70%;
+        margin: 0 auto;
+        background-color: #FDC332;
+        height: 40px;
+        color: #253131;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    &__check{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    .checkstyle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #FDC332;
+        border-radius: 5px;
+        background-color: #253131;
+        margin-left: 0;
+    }
+    
+    &__check:checked + .checkstyle::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        background-color: #FDC332;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+    span {
+        display: inline-block;
+        color: #FDC332;
+        vertical-align: top;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }	
+}
+
 

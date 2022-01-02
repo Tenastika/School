@@ -6,32 +6,25 @@
 			line-height: 28px;
 			margin-bottom: 20px;
 		} 
-		.swiper-button-next {
-			right: 43%; 
-		}
-		.swiper-button-prev {
-			left: 43%;
-		}
+	
 		.slide {
-			display: flex;
+			
 			flex-direction: column;
 			background-color: #FFFFFF; 
 	
 			&__title {
-				font-size: 22px;
+				font-size: 20px;
 				line-height: 33px;
-				font-weight: 500;           
+				font-weight: 400;           
+			}
+			&__text {
+				padding: 10px;
 			}
 		}
 	}
 
 	@media ( max-width: 768px ) {
-		.swiper-button-next {
-			right: 40%; 
-		}
-		.swiper-button-prev {
-			left: 40%;
-		}
+	
 		.slide {
 			&__title {
 				font-size:18px;
@@ -41,16 +34,12 @@
 			&__text {
 				font-size: 15px;
 				line-height: 35px;
-			}}
+			}
+		}
 	}
 
 	@media ( max-width: 425px ) {
-		.swiper-button-next {
-			right: 33%; 
-		}
-		.swiper-button-prev {
-			left: 33%;
-		}
+		
 		&__text {
 			font-size: 15px;
 			line-height: 25px;
@@ -76,12 +65,7 @@
 	}
 
 	@media ( max-width: 320px ) {
-		.swiper-button-next {
-			right: 30%; 
-		}
-		.swiper-button-prev {
-			left: 30%;
-		}
+		
 
 		&__text {
 			font-size: 13px;
@@ -94,4 +78,17 @@
 			}
 		}
 	}
+	}
+	.modal-course {
+		@media ( max-width: 768px ) {
+			width: 80%;
+			padding:  30px;
+		}
+		@media ( max-width: 425px ) {
+			width: 80%;
+			padding:  20px;
+			h2 {
+				font-size: 25px;
+			}
+		}
 	}

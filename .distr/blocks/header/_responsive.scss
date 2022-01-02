@@ -1,28 +1,91 @@
 .header {
 
-	@media ( max-width: 1200px ) {
-	}
+	
 
 	@media ( max-width: 991px ) {
+		&__logo {
+			font-size: 17px;
+			line-height: 22px;
+			margin-right: auto;
+		   }
+
+		&__nav {
+			font-size: 13px;	
+		}
 	}
 
 	@media ( max-width: 768px ) {
-		&__nav {
-			display: none;
-			
-		}
+		
 		&__logo {
-			font-family: 'Play', sans-serif;
 			font-size: 18px;
-			line-height: 20px;
-			color: #FDC332;
-			white-space: nowrap;
-		   }
+			line-height: 20px;	
+		}
+
+		&__item {
+			font-size: 23px;
+			line-height: 30px;
+		}
+
+		&__nav {
+			transform: translateX(-300%);	
+		}
+
+		&__login {
+			position: absolute;
+			right: 40px;
+		}
+		   .hamburger {
+			display: block;
+			margin-right: 20px;
+		}
+		
 	}
 
-	@media ( max-width: 576px ) {
-	}
+	
 
 	@media ( max-width: 425px ) {
+		.container {
+			padding: 20px 30px;
+		}
+
+		&__login {
+			right: 20px;
+		}
+
+		&__logo {
+			font-size: 15px;
+			line-height: 22px;
+		}
+		.active  {
+			width: 100%;
+			padding: 10px 0;
+			font-size: 28px;
+			color: #fff;
+			background-color: #253131;
+			color: #FDC332;
+			
+		}
+
+		.login {
+			&__item {
+			font-size: 15px;
+			line-height: 22px;
+			}
+			&__item:last-child a {
+				margin-left: 10px;
+			}
+		}
 	}
+
+	@media ( max-width: 375px ) {
+		&__item {
+			font-size: 23px;	
+		}
+	}
+
+	@media (max-width: 320px) {
+		.container {
+			padding: 20px 15px;
+		}
+	  }
 }

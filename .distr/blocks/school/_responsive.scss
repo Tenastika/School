@@ -1,4 +1,9 @@
 .school {
+	@media ( max-width: 1350px ){
+		&__title {
+			width: 48%;
+		}
+	}
 
 	@media ( max-width: 1200px ) {
 				
@@ -9,7 +14,7 @@
 		}
 	
 		.container {
-			padding: 80px 60px 70px;
+			padding: 80px 70px 70px;
 		}
 		&__title {
 			width: 50%;
@@ -31,7 +36,7 @@
 		}
 	
 		.container {
-			padding: 50px 40px 40px;
+			padding: 50px 70px 40px;
 		}
 	}
 
@@ -46,7 +51,7 @@
 		}
 		
 		.container {
-			padding: 60px 30px 40px;
+			padding: 60px 40px 40px;
 		}
 	}
 

@@ -27,11 +27,12 @@
     
     }
     .swiper-slide {
-        box-shadow: 15px 20px 20px 2px rgba(0, 0, 0, 0.068);  
+        box-shadow: 15px 20px 20px 2px rgba(0, 0, 0, 0.068); 
+
     }
 
     .slide {
-        
+        max-height: 345px;
         padding: 24px;
 
         &__text {
@@ -43,28 +44,34 @@
             margin-bottom: 10px;
         }
 
+        &__buttons {
+            position: relative;
+            width: 150px;
+            margin: 0 auto;
+        } 
     
         &__student {
             position: relative;
             padding-left: 85px;
         }
-        &__student::before {
-            color: aqua;
-            content: url(/img/feedback/photo1.png);
-            position: absolute;
-            top: 0;
-            margin-left: -85px;
-        }  
-    }
-    .slide:nth-child(1) {
         
-        .student:before {
+        .student1::before {
             content: url(/img/feedback/photo1.png);
+        } 
+        .student2::before {
+            content: url(/img/feedback/photo2.png);
+        }
+        .student3::before {
+            content: url(/img/feedback/photo3.png);
+        }
+        &__student::before {
+            
             position: absolute;
             top: 0;
             margin-left: -85px;
-        }
+        } 
     }
+    
     div.slide {  
         cursor: pointer;
     }
@@ -74,7 +81,7 @@
         width: 48px;
         height: 48px;
         color: #253131;
-        top: 90%; 
+        top: -30px;
     }
 
     .swiper-button-prev:active, .swiper-button-next:active {
@@ -83,33 +90,26 @@
     }
 
     .swiper-button-next::after { 
-        content: url(/img/courses/rightS.png);
+        content: url(/img/feedback/rightS.png);
         position: relative; 
         bottom: 2px;
 
     }
     .swiper-button-prev::after { 
-        content: url(/img/courses/leftS.png);
+        content: url(/img/feedback/leftS.png);
         position: relative; 
         bottom: 2px; 
 
     }
     .swiper-button-prev:active:after { 
-        content: url(/img/courses/leftB.png); 
+        content: url(/img/feedback/leftB.png); 
 
     }
     .swiper-button-next:active:after { 
-        content: url(/img/courses/rightB.png);
+        content: url(/img/feedback/rightB.png);
     }
 
-    .swiper-button-next {
-        right: 45%; 
-        left: auto; 
-    }
-    .swiper-button-prev {
-        left: 45%;
-        right: auto;  
-    }
+   
 
 }
 

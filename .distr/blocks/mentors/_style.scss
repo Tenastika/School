@@ -18,12 +18,15 @@ padding-top: 30px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         gap: 2em;
-        justify-items: center;
+        
     }
 
     &__card {
         cursor: pointer;
-        box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.068);  
+        box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.068); 
+        display: block; 
+        background-color: #fff;
+        color: #253131;
     }
 
     &__card-photo {
@@ -32,6 +35,7 @@ padding-top: 30px;
 
     &__card-info {
         padding: 20px 0 25px 25px;
+        
     }
 
     &__card-title {
@@ -51,6 +55,32 @@ padding-top: 30px;
         top: 2px;
         margin-right: 10px;
     }
-}
-.container {
+    &__card-modal {
+        display: none;
+        
+        width: 60%;
+        .mentors__card-photo {
+
+            float: left;
+            width: 40%;
+            margin-right: 30px;
+        }
+        .mentors__card-title, 
+        .mentors__card-text,
+        .mentors__card-reit {
+            
+            margin-left: auto;
+            margin-bottom: 10px;
+        }
+        .mentors__card-info {
+            padding: 0;
+        }
+        .mentors__card-description {
+            font-size: 18px;
+            line-height: 33px; 
+        }
+    }
+    &__card-div {
+        padding: 40px;
+    }
 }

@@ -1,23 +1,13 @@
 .feedback {
 	@media ( max-width: 1200px ) {
-		.swiper-button-next {
-			right: 40%; 
-		}
-		.swiper-button-prev {
-			left: 40%;
-		}
+		
 		.slide {
 			padding-bottom: 50px;
 		}
 	}
 
 	@media ( max-width: 1024px ) {
-		.swiper-button-next {
-			right: 35%; 
-		}
-		.swiper-button-prev {
-			left: 35%; 
-		}
+		
 		.slide {
 			padding-bottom: 50px;
 		}
@@ -37,12 +27,7 @@
 	}
 
 	@media ( max-width: 425px ) {
-		.swiper-button-next {
-			right: 30%; 
-		}
-		.swiper-button-prev {
-			left: 30%; 
-		}
+		
 		.slide {
 			padding-bottom: 50px;
 		}

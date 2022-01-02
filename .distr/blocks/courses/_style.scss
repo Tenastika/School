@@ -13,11 +13,12 @@
     }   
 
     .swiper {
-        width: 100%;
+        
     }
 
     .swiper-wrapper {
-        padding: 20px 20px 100px;
+        
+        padding: 20px 20px 100px 0;
        
     }
     .swiper-slide {
@@ -25,6 +26,7 @@
     }
 
     .slide {
+       
         display: flex;
         flex-direction: column;
         background-color: #FFFFFF; 
@@ -43,7 +45,12 @@
 
         span {
             white-space: nowrap;
-        }    
+        }
+        &__buttons {
+            position: relative;
+            width: 150px;
+            margin: 0 auto;
+        }   
     }
     div.slide {  
         cursor: pointer;
@@ -54,7 +61,7 @@
         width: 48px;
         height: 48px;
         color: #253131;
-        top: 90%; 
+        top: -30px;
     }
 
     .swiper-button-prev:active, .swiper-button-next:active {
@@ -63,32 +70,33 @@
     }
 
     .swiper-button-next::after { 
-        content: url(img/courses/rightS.png);
+        content: url(/img/courses/rightS.png);
         position: relative; 
         bottom: 2px;
     
     }
     .swiper-button-prev::after { 
-        content: url(img/courses/leftS.png);
+        content: url(/img/courses/leftS.png);
         position: relative; 
         bottom: 2px; 
     
     }
     .swiper-button-prev:active:after { 
-        content: url(img/courses/leftB.png); 
+        content: url(/img/courses/leftB.png); 
     
     }
     .swiper-button-next:active:after { 
-        content: url(img/courses/rightB.png);
+        content: url(/img/courses/rightB.png);
     }
     
-    .swiper-button-next {
-    right: 45%; 
-    left: auto; 
-    }
-    .swiper-button-prev {
-        left: 45%;
-        right: auto;  
-    }
+   
   
 }
+.modal-course {
+       display: none;
+       width: 60%;
+       padding:  40px;
+       h2 {
+           text-align: center;
+       }
+   }

@@ -8,7 +8,7 @@
 					<p class="slide__text">
 					“Lorem Ipsum is simply dum text of the printing typesetting. Lorem Ipsum is the simply dummy text of the. Lorem Ipsum is simply dum text of one the printing typesetting. Lorem Ipsum.”
 					</p>
-					<div class="slide__student">
+					<div class="slide__student student1">
 					<h3 class="slide__student-name">Jane Cooper</h3>UX UI Design Student	
 					</div>
 				</div>
@@ -16,7 +16,7 @@
 					<p class="slide__text">
 					“Lorem Ipsum is simply dum text of the printing typesetting. Lorem Ipsum is the simply dummy text of the. Lorem Ipsum is simply dum text of one the printing typesetting. Lorem Ipsum.”
 					</p>
-					<div class="slide__student">
+					<div class="slide__student student2">
 					<h3 class="slide__student-name">Wade Warren</h3>Digital Marketing Student 	
 					</div>
 				</div>
@@ -24,7 +24,7 @@
 					<p class="slide__text">
 					“Lorem Ipsum is simply dum text of the printing typesetting. Lorem Ipsum is the simply dummy text of the. Lorem Ipsum is simply dum text of one the printing typesetting. Lorem Ipsum.”
 					</p>
-					<div class="slide__student">
+					<div class="slide__student student3">
 					<h3 class="slide__student-name">Esther Howard</h3>English Language Student
 					</div>
 				</div>
@@ -32,13 +32,15 @@
 					<p class="slide__text">
 					“Lorem Ipsum is simply dum text of the printing typesetting. Lorem Ipsum is the simply dummy text of the. Lorem Ipsum is simply dum text of one the printing typesetting. Lorem Ipsum.”
 					</p>
-					<div class="slide__student">
+					<div class="slide__student student2">
 					<h3 class="slide__student-name">Wade Warren</h3>Digital Marketing Student 	
 					</div>
 				</div>
    			</div>
-			   <div class="swiper-button-prev slide__buttons"></div>
-  			   <div class="swiper-button-next slide__buttons"></div>
+			   <div class="slide__buttons">
+			   		<div class="swiper-button-prev"></div>
+	  			   <div class="swiper-button-next"></div>
+			   </div>
 		</div>
 	</div>
 	
